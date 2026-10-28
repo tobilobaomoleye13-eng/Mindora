@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mindora — Calm, practical emotional support</title>
+<meta name="description" content="Mindora is a private, mobile-first wellness companion for reflection, journaling, mood check-ins and practical self-help exercises."/>
+<link rel="stylesheet" href="./styles.css"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+<div id="app" aria-live="polite">
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="brand"><span class="leaf">🌿</span><div><strong>Mindora</strong><small>Calm, practical support</small></div></div>
+    <nav id="desktopNav"></nav>
+    <div class="sidebar-foot">
+      <button class="ghost" id="crisisBtn">Get urgent help</button>
+      <p class="tiny">Mindora is not a therapist or medical service.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+      <div class="top-title" id="pageTitle">Home</div>
+      <button class="icon-btn" id="safetyBtn" aria-label="Safety and crisis support">🛟</button>
+    </header>
+
+    <div id="view" class="view"></div>
+
+    <nav class="bottom-nav" id="bottomNav" aria-label="Primary navigation"></nav>
+  </main>
+</div>
+
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <div id="modalBody"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<div class="toast hidden" id="toast" role="status"></div>
+<script src="./app.js"></script>
+</body>
+</html>
